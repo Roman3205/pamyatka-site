@@ -68,7 +68,7 @@
                             <div class="alert alert-danger">Ответ на задание "{{answer.title}}" от автора {{answer.author_name}} неверный, попробуйте ещё раз (id:{{answer._id}})</div>
                             {{/if}}
                             {{#if success}}
-                            <div class="alert alert-success">Задание {{answer.title}} от автора {{answer.author_name}} решено верно! (id:{{answer._id}})</div>
+                            <div class="alert alert-success">Задание "{{answer.title}}" от автора {{answer.author_name}} решено верно! (id:{{answer._id}})</div>
                             {{/if}}
                     {{#each tasks}}
                     <h4>Автор задания: {{this.author_name}}</h4>
