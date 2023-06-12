@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+    <title>Help-card OGE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/test4.css">
+    <script src="/js/test4.js" defer></script>
+</head>
+
+<body id="body">
+    <div class="container-fluid" id="screen">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <span class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark">
+                <img src="/assets/logo.png" id="dark-mode" alt="" width="180px" class="mb-3 mb-lg-0 me-4 mt-3 ms-lg-2 me-lg-1 mt-lg-0 img1">
+            </span>
+            <ul class="nav nav-pills mt-lg-1">
+                <li class="nav-item ms-4 ms-lg-0"><a href="/main" class="btn btn-md btn-primary fw-bold text-white pb-2" aria-current="page">Главная</a></li>
+                <li class="nav-item"><a href="/pamyatkaplus" class="nav-link"><span class="span">Памятка+</span></a></li>
+                <li class="nav-item"><a href="/reminder" class="nav-link">Инструкция</a></li>
+                <li class="nav-item ms-2 ms-lg-0"><a href="/video" class="nav-link">Отдельные видеообучалки</a></li>
+                <li class="nav-item ms-2 ms-lg-0"><a href="https://inf-oge.sdamgia.ru/" class="nav-link">Исходники</a></li>
+            </ul>
+        </header>
+        <main>
+            <div class="container1">
+                <div class="time">
+                    <p><b>Время</b></p>
+                    <span>Осталось </span>
+                    <p id="timer">02:30:00</p>
+                    <button id="pauseButton" style="border-radius: 10px; background-color: #0d6efd; border: none; color: white; padding: 3px 5px 3px 5px;">Пауза</button>
+                </div>
+                <h2 class="vartext">Вариант №4</h2>
+                <div class="topic">
+                    <div class="textvar1">
+                        При выполнении заданий с кратким ответом впишите в поле для ответа цифру, которая соответствует номеру правильного <br> ответа, или число, слово, последовательность букв (слов) или цифр. Ответ следует записывать без пробелов и
+                        каких-либо дополнительных символов.
+                        <br><br> Если вариант задан учителем, вы можете вписать или загрузить в систему ответы к заданиям с развернутым ответом.<br> Учитель увидит результаты выполнения заданий с кратким ответом и сможет оценить загруженные ответы к заданиям
+                        с <br>развернутым ответом. Выставленные учителем баллы отобразятся в вашей статистике.
+                    </div>
+                    <h6 class="h6c">Для упрощения вычислений, вы можете использовать калькулятор</h6>
+                    <div class="calculator">
+                        <div class="output" style="border: 5px solid black; width: 350px; height: 70px; box-sizing: border-box; font-size: 45px; text-align: right; font-family: Arial;"></div>
+                        <div class="string1" style="border: 2px solid black; width: 350px; height: 70px; display: flex;">
+                            <button class="button" style="width: 25%; height: 100%; font-size: 35px;">7</button>
+                            <button class="button" style="width: 25%; height: 100%; font-size: 35px;">8</button>
+                            <button class="button" style="width: 25%; height: 100%; font-size: 35px;">9</button>
+                            <button class="reset" style="width: 25%; height: 100%; font-size: 35px;">C</button>
+                        </div>
+                        <div class="string2" style="border: 2px solid black; width: 350px; height: 70px; display: flex;">
+                            <button class="button" style="width: 25%; height: 100%; font-size: 35px;">4</button>
+                            <button class="button" style="width: 25%; height: 100%; font-size: 35px;">5</button>
+                            <button class="button" style="width: 25%; height: 100%; font-size: 35px;">6</button>
+                            <button class="button" style="width: 25%; height: 100%; font-size: 35px;">/</button>
+                        </div>
+                        <div class="string3" style="border: 2px solid black; width: 350px; height: 70px; display: flex;">
+                            <button class="button" style="width: 25%; height: 100%; font-size: 35px;">1</button>
+                            <button class="button" style="width: 25%; height: 100%; font-size: 35px;">2</button>
+                            <button class="button" style="width: 25%; height: 100%; font-size: 35px;">3</button>
+                            <button class="button" style="width: 25%; height: 100%; font-size: 45px;">*</button>
+                        </div>
+                        <div class="string4" style="border: 2px solid black; width: 350px; height: 70px; display: flex;">
+                            <button class="button" style="width: 25%; height: 100%; font-size: 35px;">0</button>
+                            <button class="button" style="width: 25%; height: 100%; font-size: 40px;">+</button>
+                            <button class="button" style="width: 25%; height: 100%; font-size: 35px;">-</button>
+                            <button class="result" style="width: 25%; height: 100%; font-size: 35px;"><b>=</b></button>
+                        </div>
+                    </div>
+                    <div class="exercise1">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">1</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 1</div>
+                            </div>
+                            <div class="text">
+                                <p>В одной из кодировок Unicode каждый символ кодируется 16 битами. Ваня написал текст (в нём нет лишних пробелов):</p>
+                                <div>
+                                    <p class="kt1" style="padding-left: 120px;">«D, Io, Ada, Java, Swift, Python, ColdFusion — языки программирования».</p>
+                                </div>
+                                <p style="text-indent: 25px;"> Ученик вычеркнул из списка название одного из языков программирования. Заодно он вычеркнул ставшие лишними <br> запятые и пробелы — два пробела не должны идти подряд.</p>
+                                <p style="text-indent: 25px;"> При этом размер нового предложения в данной кодировке оказался на 10 байт меньше, чем размер исходного предложения.<br> Напишите в ответе вычеркнутое название языка программирования.</p>
+                            </div>
+                            <div class="inp">
+                                <span>Ответ:</span><input type="text" name="task1" id="task1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise2">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">2</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 2</div>
+                            </div>
+                            <div class="text">
+                                <p>Вася и Петя играли в шпионов и кодировали сообщение собственным шифром. Фрагмент кодовой таблицы приведён ниже:</p>
+                                <img class="imgm1" src="/assets/task2_4.png">
+                                <p>Определите, из скольких букв состоит сообщение, если известно, что буквы в нём не повторяются:</p>
+                                <p class="pass-p2"># + + ^ # # ^ # ^</p>
+                            </div>
+                            <div class="inp">
+                                <span>Ответ:</span><input type="text" name="task2" id="task2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise3">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">3</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 3</div>
+                            </div>
+                            <div class="text">
+                                <p>Напишите наименьшее целое число x, для которого истинно высказывание:</p>
+                                <p class="kt2"><b>НЕ</b> (X
+                                    <=8 ) <b>И НЕ</b> (X >= 15) <b>И</b> (X чётное).</p>
+                            </div>
+                            <div class="inp">
+                                <span>Ответ:</span><input type="text" name="task3" id="task3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise4">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">4</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 4</div>
+                            </div>
+                            <div class="text">
+                                <p style="text-indent: 25px;">Между населёнными пунктами А, В, С, D, Е построены дороги, протяжённость которых (в километрах) приведена в таблице:</p>
+                                <img class="imgm2" src="/assets/task4_4.png">
+                                <p style="text-indent: 25px;">Определите длину кратчайшего пути между пунктами А и E. Передвигаться можно только по дорогам, протяжённость<br> которых указана в таблице.</p>
+                            </div>
+                            <div class="inp">
+                                <span>Ответ:</span><input type="text" name="task4" id="task4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise5">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">5</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 5</div>
+                            </div>
+                            <div class="text">
+                                <p>У исполнителя Альфа две команды, которым присвоены номера:</p>
+                                <p><b>1. прибавь 2;<br>
+
+                                    2. раздели на b</b></p>
+                                <p>(b — неизвестное натуральное число; b ≥ 2).</p>
+                                <p style="text-indent: 25px;">Выполняя первую из них, Альфа увеличивает число на экране на 2, а выполняя вторую, делит это число на b. Программа<br> для исполнителя Альфа — это последовательность номеров команд. Известно, что программа 11211 переводит
+                                    число 50 <br>в число 22. Определите значение b.</p>
+                            </div>
+                            <div class="inp">
+                                <span>Ответ:</span><input type="text" name="task5" id="task5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise6">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">6</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 6</div>
+                            </div>
+                            <div class="text">
+                                <p>Ниже приведена программа, записанная на пяти языках программирования.</p>
+                                <img class="imgm3" src="/assets/task6_4.png" width="480px">
+                                <p style="text-indent: 25px;">Было проведено 9 запусков программы, при которых в качестве значений переменных s и k вводились следующие пары<br> чисел:</p>
+                                <p class="kt3">(9, 10); (11, 5); (–2, 8); (9, 9); (2, 8); (–1, 3); (–4, 5); (10, 9); (4, –3).</p>
+                                <p>Сколько было запусков, при которых программа напечатала «NO»?</p>
+                            </div>
+                            <div class="inp">
+                                <span>Ответ:</span><input type="text" name="task6" id="task6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise7">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">7</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 7</div>
+                            </div>
+                            <div class="text">
+                                <p style="text-indent: 25px;">Доступ к файлу jazz.mp3, находящемуся на сервере music.com, осуществляется по протоколу http. Фрагменты адреса файла <br> закодированы буквами от А до Ж. Запишите последовательность этих букв, кодирующую адрес указанного
+                                    файла в сети <br>Интернет.</p>
+                                <div style="margin-left: 30px;">
+                                    <p>А) http<br> Б) com
+                                        <br> В) jazz
+                                        <br> Г) .mp3
+                                        <br> Д) /
+                                        <br> Е) music.
+                                        <br> Ж) ://
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="inp">
+                                <span>Ответ:</span><input type="text" name="task7" id="task7">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise8">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">8</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 8</div>
+                            </div>
+                            <div class="text">
+                                <p style="text-indent: 25px;">В языке запросов поискового сервера для обозначения логической операции «ИЛИ» используется символ «|», а для<br> логической операции «И» — символ «&». В таблице приведены запросы и количество найденных по ним <br>страниц
+                                    некоторого сегмента сети Интернет.</p>
+                                <img class="imgm4" src="/assets/task8_4.png" width="370px">
+                                <p style="text-indent: 25px;">Какое количество страниц (в тысячах) будет найдено по запросу Стул?</p>
+                            </div>
+                            <div class="inp">
+                                <span>Ответ:</span><input type="text" name="task8" id="task8">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise9">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">9</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 9</div>
+                            </div>
+                            <div class="text">
+                                <p style="text-indent: 25px;">На рисунке — схема дорог, связывающих города А, Б, В, Г, Д, Е, Ж, З, И, К и Л. По каждой дороге можно двигаться только в<br> Сколько существует различных путей из города А в город И, проходящих через город Ж?
+                                </p>
+                                <img class="imgm5" src="/assets/task9_4.png" width="360px">
+                            </div>
+                            <div class="inp">
+                                <span>Ответ:</span><input type="text" name="task9" id="task9">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise10">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">10</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 10</div>
+                            </div>
+                            <div class="text">
+                                <p style="text-indent: 25px;">Среди приведённых ниже трёх чисел, записанных в различных системах счисления, найдите максимальное и запишите его в <br>ответе в десятичной системе счисления. В ответе запишите только число, основание системы счисления
+                                    указывать не нужно.</p>
+                                <p class="kt4">50<sub>16</sub>, 106<sub>8</sub>, 1001010<sub>2</sub></p>
+                            </div>
+                            <div class="inp">
+                                <span>Ответ:</span><input type="text" name="task10" id="task10">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise11">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">11</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 11</div>
+                            </div>
+                            <div class="text">
+                                <p style="text-indent: 25px;">В одном из произведений И. С. Тургенева, текст которого приведён в подкаталоге <b>Тургенев</b> каталога <b>DEMO-12</b>,<br> присутствует произведение, в котором присутствует персонаж Александра Павловна. С помощью поисковых
+                                    средств
+                                    <br>операционной системы и текстового редактора выясните имя брата этого персонажа.<br> Выполните задание, распаковав архив на своём компьютере.</p>
+                                <a class="kt5" href="/files/DEMO-12_4.rar" download style="color: #0d6efd;">DEMO-12.rar</a>
+                            </div>
+                            <div class="inp">
+                                <span>Ответ:</span><input type="text" name="task11" id="task11">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise12">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">12</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 12</div>
+                            </div>
+                            <div class="text">
+                                <p>Сколько файлов с расширениями .docx и .doc содержится в подкаталогах каталога <b>Task12</b>? В ответе укажите только число.<br> Выполните задание, распаковав архив на своём компьютере.</p>
+                                <a class="kt6" href="/files/Task12_4.rar" download style="color: #0d6efd;">12 задание.rar</a>
+                            </div>
+                            <div class="inp">
+                                <span>Ответ:</span><input type="text" name="task12" id="task12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exercise13">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">13</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 13</div>
+                            </div>
+                            <div class="text">
+                                <p><b>Выберите ОДНО из предложенных ниже заданий: 13.1 или 13.2.</b></p>
+                                <p style="text-indent: 25px;"><b>13.1</b> Используя информацию и иллюстративный материал, содержащийся в каталоге «Бегемот», создайте<br>презентацию из трёх слайдов на тему «Бегемот». В презентации должны содержаться краткие иллюстрированные<br>сведения
+                                    о внешнем виде, об ареале обитания, образе жизни и рационе бегемотов. Все слайды должны быть выполнены<br>в едином стиле, каждый слайд должен быть озаглавлен.</p>
+                                <p style="text-indent: 25px;">Презентацию сохраните в файле, имя которого Вам сообщат организаторы экзамена. Файл ответа необходимо сохранить в<br>одном из следующих форматов: *.odp, или *.ppt, или *.pptx.</p>
+                                <a class="kt7" href="/files/Бегемот_4.rar" download style="color: #0d6efd;">Бегемот.rar</a><br><br>
+                                <p style="text-indent: 25px;"><b>13.2</b> Создайте в текстовом редакторе документ и напишите в нём следующий текст, точно воспроизведя всё оформление<br>текста, имеющееся в образце.</p>
+                                <p style="text-indent: 25px;">Данный текст должен быть набран шрифтом размером 14 пунктов обычного начертания. Отступ первой строки первого<br>абзаца основного текста — 1 см. Расстояние между строками текста не менее одинарного, но не более полуторного<br>междустрочного
+                                    интервала.
+                                </p>
+                                <p style="text-indent: 25px;">Основной текст выровнен по ширине; в ячейках таблицы применено выравнивание по левому краю. В основном тексте и<br>таблице есть слова, выделенные полужирным, курсивным шрифтом и подчёркиванием. Ширина таблицы меньше ширины<br>основного
+                                    текста. Таблица выровнена на странице<br>по центру горизонтали.</p>
+                                <p style="text-indent: 25px;">При этом допустимо, чтобы ширина Вашего текста отличалась от ширины текста в примере, поскольку ширина текста<br>зависит от размеров страницы и полей. В этом случае разбиение текста на строки должно соответствовать стандартной
+                                    ширине
+                                    <br>абзаца.</p>
+                                <p style="text-indent: 25px;">Интервал между текстом и таблицей не менее 12 пунктов, но не более 24 пунктов.</p>
+                                <p style="text-indent: 25px;">Текст сохраните в файле, имя которого Вам сообщат организаторы. Файл ответа необходимо сохранить в одном из<br>следующих форматов: *.odt, или *.doc, или *.docx.</p>
+                                <img class="imgm6" src="/assets/task13_4.png" width="630px">
+                            </div>
+                            <br>
+                            <br>
+                            <p class="text-muted" style="font-size: 13px;" align="left"><a href="/files/13_4.docx" download>Ссылка на критерии оценивания.</a></p>
+                                <p align="left">Ваша оценка (баллов):</p>
+                                <div class="inputs1" style="display: flex; justify-content: left;">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="countscre13" type="radio" id="inlineCheckbox131" value="option1" style="border: 1px solid dimgrey;">
+                                        <label class="form-check-label" for="inlineCheckbox1">0</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="countscre13" type="radio" id="inlineCheckbox132" value="option2" style="border: 1px solid dimgrey;">
+                                        <label class="form-check-label" for="inlineCheckbox2">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="countscre13" type="radio" id="inlineCheckbox133" value="option3" style="border: 1px solid dimgrey;">
+                                        <label class="form-check-label" for="inlineCheckbox3">2</label>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="exercise14">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">14</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 14</div>
+                            </div>
+                            <div class="text">
+                                <p style="text-indent: 25px;">В электронную таблицу занесли результаты тестирования учащихся по математике и физике. Вот первые строки<br> получившейся таблицы: </p>
+                                <img class="imgm7" src="/assets/task14_4.png" width="450px">
+                                <p style="text-indent: 25px;">В столбце A указаны фамилия и имя учащегося; в столбце B — район города, в котором расположена школа учащегося; в<br> столбцах C, D — баллы, полученные по математике и физике. По каждому предмету можно было набрать от 0
+                                    до 100 баллов.<br> Всего в электронную таблицу были занесены данные по 1000 учащимся. Порядок записей в таблице произвольный.</p>
+                                <p><b>Выполните задание.</b></p>
+                                <p style="text-indent: 25px;">Откройте файл с данной электронной таблицей (расположение файла Вам сообщат организаторы экзамена). На основании <br>данных, содержащихся в этой таблице, ответьте на два вопроса.</p>
+                                <p style="text-indent: 25px;">1. Чему равна наименьшая сумма баллов у учеников Подгорного района? Ответ на этот вопрос запишите в ячейку G2<br> таблицы.</p>
+                                <p style="text-indent: 25px;">2. Сколько участников тестирования набрали одинаковое количество баллов по математике и физике? Ответ на этот вопрос<br> запишите в ячейку G3 таблицы.</p>
+                                <p style="text-indent: 25px;">3. Постройте круговую диаграмму, отображающую соотношение количества участников из Майского, Заречного и <br>Кировского районов. Левый верхний угол диаграммы разместите вблизи ячейки G6.</p>
+                                <a class="kt8" href="/files/task19_4.xls" download style="color: #0d6efd;">task 14.xls</a>
+                            </div>
+                            <br>
+                            <br>
+                            <p class="text-muted" style="font-size: 13px;" align="left"><a href="/files/14_4.docx" download>Ссылка на критерии и решение</a></p>
+                                <p align="left">Ваша оценка (баллов):</p>
+                                <div class="inputs1" style="display: flex; justify-content: left;">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="countscre14" type="radio" id="inlineCheckbox141" value="option1" style="border: 1px solid dimgrey;">
+                                        <label class="form-check-label" for="inlineCheckbox1">0</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="countscre14" type="radio" id="inlineCheckbox142" value="option2" style="border: 1px solid dimgrey;">
+                                        <label class="form-check-label" for="inlineCheckbox2">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="countscre14" type="radio" id="inlineCheckbox143" value="option3" style="border: 1px solid dimgrey;">
+                                        <label class="form-check-label" for="inlineCheckbox3">2</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="countscre14" type="radio" id="inlineCheckbox144" value="option3" style="border: 1px solid dimgrey;">
+                                        <label class="form-check-label" for="inlineCheckbox3">3</label>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="exercise15">
+                        <div class="ex">
+                            <div class="z">
+                                <div class="d" style="padding: 3px 7px 3px 7px; box-sizing: border-box;">15</div>
+                                <div style="margin: 5px 0px 0px 10px;">Тип 15</div>
+                            </div>
+                            <div class="text">
+                                <p><b>Выберите ОДНО из предложенных ниже заданий: 15.1 или 15.2.</b></p>
+                                <p style="text-indent: 25px;"><b>15.1</b> На бесконечном поле имеется вертикальная стена. Длина стены неизвестна. От верхнего конца стены вправо отходит <br>горизонтальная стена также неизвестной длины. Робот находится в клетке, расположенной слева
+                                    от нижнего края вертикальной<br> стены.</p>
+                                <p style="text-indent: 25px;">На рисунке указан один из возможных способов расположения стен и Робота (Робот обозначен буквой «Р»).<br>Напишите для Робота алгоритм, закрашивающий все клетки, расположенные левее вертикальной стены и выше<br> горизонтальной
+                                    стены и прилегающие к ним. Робот должен закрасить только клетки, удовлетворяющие данному условию.<br> Например, для приведённого выше рисунка Робот должен закрасить следующие клетки (см. рис.).</p>
+                                <p style="text-indent: 25px;">Конечное расположение Робота может быть произвольным. Алгоритм должен решать задачу для произвольного размера<br> поля и любого допустимого расположения стен внутри прямоугольного поля. При исполнении алгоритма Робот не
+                                    должен
+                                    <br> разрушиться. Алгоритм напишите в текстовом редакторе и сохраните в текстовом файле. Название файла и каталог для<br> сохранения Вам сообщат организаторы экзамена.</p>
+                                <p style="text-indent: 25px;"><b>15.2</b> Напишите программу, которая в последовательности целых чисел определяет сумму двух наибольших и сумму двух<br> наименьших. Программа должна вывести две этих суммы в указанном порядке. Программа получает на вход
+                                    целые числа, <br>количество введённых чисел не известно, последовательность чисел заканчивается числом 0 (0 — признак окончания ввода, не<br> входит в последовательность). Количество чисел не превышает 1000. Введённые
+                                    числа по модулю не превышают 30 000.<br><i>В последовательности не менее двух чисел.</i></p>
+                                <img class="imgm9" src="/assets/task15(2)_4.png" width="450px">
+                            </div>
+                            <br>
+                            <br>
+                            <p class="text-muted" style="font-size: 13px;" align="left"><a href="/files/15_4.docx" download>Ссылка на критерии и решение.</a></p>
+                                <p align="left">Ваша оценка (баллов):</p>
+                                <div class="inputs1" style="display: flex; justify-content: left;">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="countscre15" type="radio" id="inlineCheckbox151" value="option1" style="border: 1px solid dimgrey;">
+                                        <label class="form-check-label" for="inlineCheckbox1">0</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="countscre15" type="radio" id="inlineCheckbox152" value="option2" style="border: 1px solid dimgrey;">
+                                        <label class="form-check-label" for="inlineCheckbox2">1</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="countscre15" type="radio" id="inlineCheckbox153" value="option3" style="border: 1px solid dimgrey;">
+                                        <label class="form-check-label" for="inlineCheckbox3">2</label>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p style="text-align: center; padding-top: 60px;">Завершите тестирование, чтобы увидеть ответы.</p>
+                </div>
+                <div>
+                    <input type="button" value="Сохранить" id="getresults">
+                    <p class="text-danger d-none" style="padding-top: 20px;">Заполните пожалуйста все поля ввода ответов!</p>
+                </div>
+                <div style="text-align: center; margin-top: 40px; margin-bottom: 60px;">
+                    <a href="#top">Вернуться наверх</a>
+                </div>
+            </div>
+            <div class="results d-none">
+                <div class="flex">
+                    <div class="flex2">
+                        <h3>Вариант №4</h3>
+                        <div class="divcross"><a class="cross" href="/test4"><i class="fas fa-times"></i></a></div>
+                    </div>
+                    <h2 id="yourmark">Ваша оценка <b></b></h2>
+                </div>
+                <h5 id="score">Набрано баллов: <b></b></h5>
+                <p class="pass-p">Работа сдана:
+                    <span id="date" style="font-size: 13px;"></span>
+                </p>
+                <div class="res">
+                    <div class="box1">
+                        <div class="info1">
+                            <div class="testpartinfo">Тестовая часть</div>
+                        </div>
+                        <div class="testedpart">
+                            <div class="num">
+                                <ul>
+                                    <li class="num0">№</li>
+                                    <li class="num1">1</li>
+                                    <li class="num2">2</li>
+                                    <li class="num3">3</li>
+                                    <li class="num4">4</li>
+                                    <li class="num5">5</li>
+                                    <li class="num6">6</li>
+                                    <li class="num7">7</li>
+                                    <li class="num8">8</li>
+                                    <li class="num9">9</li>
+                                    <li class="num10">10</li>
+                                    <li class="num11">11</li>
+                                    <li class="num12">12</li>
+                                </ul>
+                            </div>
+                            <div class="youranswer">
+                                <ul>
+                                    <li class="ans0">Ваш ответ</li>
+                                    <div class="containeryour">
+                                        <!-- Сюда отрисовываются элементы списка ответов -->
+                                    </div>
+                                </ul>
+                            </div>
+                            <div class="rightans">
+                                <ul>
+                                    <li class="rans0">Правильный ответ</li>
+                                    <li class="rans1">Ada</li>
+                                    <li class="rans2">5</li>
+                                    <li class="rans3">10</li>
+                                    <li class="rans4">8</li>
+                                    <li class="rans5">3</li>
+                                    <li class="rans6">6</li>
+                                    <li class="rans7">АЖЕБДВГ</li>
+                                    <li class="rans8">2100</li>
+                                    <li class="rans9">17</li>
+                                    <li class="rans10">80</li>
+                                    <li class="rans11">Сергей</li>
+                                    <li class="rans12">5</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <div class="info2">
+                            <div class="expandedpartinfo">Развернутая часть</div>
+                        </div>
+                        <div class="expandedpart">
+                            <div class="numex2">
+                                <ul>
+                                    <li class="numex0">№</li>
+                                    <li class="num13">13</li>
+                                    <li class="num14">14</li>
+                                    <li class="num15">15</li>
+                                </ul>
+                            </div>
+                            <div class="yourscore">
+                                <ul>
+                                    <li class="ansex0">Ваш балл</li>
+                                    <li class="eans1 false">0</li>
+                                    <li class="eans2 false">0</li>
+                                    <li class="eans3 false">0</li>
+                                </ul>
+                            </div>
+                            <div class="maxscore">
+                                <ul>
+                                    <li class="ransex0">Макс. балл</li>
+                                    <li class="rans1">2</li>
+                                    <li class="rans2">3</li>
+                                    <li class="rans3">2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer py-3 my-5">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="/pamyatkaplus" class="nav-link"><span class="span">Памятка+</span></a></li>
+                <li class="nav-item"><a href="/reminder" class="nav-link">Инструкция</a></li>
+                <li class="nav-item"><a href="/video" class="nav-link">Отдельные видеообучалки</a></li>
+                <li class="nav-item"><a href="https://inf-oge.sdamgia.ru/" class="nav-link">Исходники</a></li>
+            </ul>
+            <p class="text-center text-muted">© 2023 Company, Inc</p>
+        </footer>
+        </div>
+    </div>
+</body>
+
+</html>

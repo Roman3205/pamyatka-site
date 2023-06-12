@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background: url(/assets/background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header {
+    margin: 0;
+    padding: 0
+}
+
+.container1 {
+    font-family: helvetica;
+    text-align: center;
+    margin-top: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.h5 {
+    line-height: 40px;
+}
+
+.h2 {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.info-table {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    transform: scale(1.3);
+}
+
+.info-table td,
+.info-table tr {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.tasks {
+    display: flex;
+    justify-content: center;
+}
+
+.blockt1,
+.blockt2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.blockt1 a,
+.blockt2 a {
+    margin-top: 5px;
+    text-decoration: none;
+    color: #0d6efd;
+    ;
+}
+
+.blockt2 {
+    margin-left: 40px;
+}
+
+.img1 {
+    border-radius: 20px;
+}
+
+.img1:hover {
+    cursor: pointer;
+}
+
+.ex7,
+.ex77 {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-table td {
+    white-space: nowrap;
+}
+.span {
+    background: linear-gradient(to right, rgb(239, 72, 72), coral, darkorange, orange,#ef79bc, #FF00FF);
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+}
+
+/* медиа запросы */
+
+@media screen and (max-width: 576px) {
+    .first-title {
+        margin-bottom: 30px;
+    }
+    .img2,
+    .img3 {
+        width: 300px;
+    }
+    .img4,
+    .img5 {
+        width: 350px;
+    }
+    .container-fluid {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .ex7,
+    .ex77 {
+        margin-left: 155px;
+    }
+    .img8, .img82, .img9, .img92 {
+        width: 320px;
+    }
+    .imgm6 {
+        width: 350px;
+    }
+    .imgm7 {
+        width: 270px;
+    }
+    .imgm8 {
+        width: 330px;
+    }
+}

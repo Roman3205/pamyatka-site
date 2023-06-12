@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adminka</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/createtask.css">
+</head>
+<body>
+    <div class="main__container__admin">
+        <div class="col-lg-8 col-md-12 col-sm-12 mt-5 mt-lg-3 products-list admin__list">
+            <h3 class="mb-4">На проверку:</h3>
+            {{#each tasks}}
+                <h5>Автор задания: {{this.author_name}}</h5>
+                <div class="product card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{this.image}}" class="image" width="400px">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="product-header card-title">
+                                        <div class="product-title">
+                                            {{this.title}}
+                                        </div>
+                                        <div class="product-controls">
+                                            <a href="/adminka/task/edit?id={{this._id}}" class="btn btn-public btn-sm">Изменить</a>
+                                            <a href="/adminka/task/remove?id={{this._id}}" class="btn btn-secondary btn-sm">Удалить</a>
+                                        </div>
+                                    </h5>
+                                    <h6 class="card-subtitle my-2 text-muted">{{this.description}}</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            {{/each}}
+        </div>
+        <div class="col-lg-8 col-md-12 col-sm-12 mt-5 mt-lg-3 products-list admin__list__all">
+            <h3 class="mb-4">Одобренные:</h3>
+            {{#each taskAll}}
+            <h6>Автор задания: {{this.author_name}}</h6>
+                <div class="product card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{this.image}}" class="image" width="400px">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="product-header card-title">
+                                        <div class="product-title">
+                                            {{this.title}}
+                                        </div>
+                                        <div class="product-controls">
+                                            <a href="/adminka/task/edit?id={{this._id}}" class="btn btn-public btn-sm">Изменить</a>
+                                            <a href="/adminka/task/remove?id={{this._id}}" class="btn btn-secondary btn-sm">Удалить</a>
+                                        </div>
+                                    </h5>
+                                    <h6 class="card-subtitle my-2 text-muted">{{this.description}}</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            {{/each}}
+        </div>
+        <div class="col-lg-8 col-md-12 col-sm-12 mt-5 mt-lg-3 products-list users__list__all">
+            <h3 class="mb-4">Все пользователи:</h3>
+            {{#each users}}
+                <div class="product card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="{{this.profile_image}}" class="image" width="400px">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="product-header card-title">
+                                        <div class="product-title">
+                                            {{this.name}}
+                                        </div>
+                                    </h5>
+                                    <h6 class="card-subtitle my-2 text-muted">email: <b class="text-black-user">{{this.email}}</b></h6>
+                                    <h6 class="card-subtitle my-2 text-muted">password: <b class="text-black-user">{{this.password}}</b></h6>
+                                    <div class="product-controls">
+                                        <a href="/adminka/users/remove?id={{this._id}}" class="btn btn-secondary btn-sm">Удалить пользователя</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            {{/each}}
+            <h3 class="my-5">Все отзывы:</h3>
+            {{#each feedbackAll}}
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                            {{this.title}}
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text mb-4">
+                        {{this.description}}
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="feedback-remove btn btn-secondary">
+                           <a href="/adminka/feedback/remove?id={{this._id}}" class="remove__link">Удалить отзыв</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</body>
+</html>

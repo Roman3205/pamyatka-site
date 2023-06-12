@@ -1,0 +1,549 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background: url(/assets/background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header {
+    margin: 0;
+    padding: 0
+}
+
+main {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.container1 {
+    text-align: center;
+    margin-top: 100px;
+    border: 2px solid lightgrey;
+    font-size: 14px;
+    max-width: 1300px;
+    margin: 100px auto;
+}
+
+.textvar1 {
+    padding-left: 100px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.topic {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-self: center;
+}
+
+
+/* Для блоков заданий */
+
+.d {
+    border: 1px solid black;
+}
+
+.z {
+    display: flex;
+    justify-self: left;
+    margin: 60px 0px 0px 0px;
+}
+
+.text {
+    margin: 25px 0px 0px 50px;
+    text-align: left;
+}
+
+.inp {
+    display: flex;
+    justify-self: left;
+    margin: 40px 0px 0px 50px;
+}
+
+.ex {
+    border-bottom: 2px solid lightgrey;
+    padding-left: 100px;
+    padding-bottom: 30px;
+}
+
+.inp input {
+    margin-left: 20px;
+    border-radius: 5px;
+    border: 2px solid #0d6efd;
+    width: 300px;
+}
+
+input[type="button"] {
+    border-radius: 10px;
+    background-color: #4d8ceb;
+    padding: 5px 15px;
+    transition: 0.5s;
+    margin-top: 20px;
+    transform: scale(1.1);
+}
+
+input[type="button"]:hover {
+    opacity: 0.8;
+}
+
+.imgm1 {
+    margin: 20px 0px 40px 300px;
+}
+
+.imgm2 {
+    margin: 20px 0px 40px 270px;
+}
+
+.kt2 {
+    padding: 25px 0px 0px 270px;
+}
+
+.kt3 {
+    padding: 0px 0px 0px 200px;
+}
+
+.kt4 {
+    padding: 25px 0px 0px 280px
+}
+
+.imgm5,
+.imgm4,
+.imgm3 {
+    margin: 20px 0px 40px 170px;
+}
+
+.imgm6 {
+    margin: 20px 0px 40px 60px;
+}
+
+.kt5,
+.kt6,
+.kt7 {
+    padding: 25px 0px 0px 320px;
+}
+
+.kt8 {
+    padding: 25px 0px 0px 330px;
+}
+
+.imgm7 {
+    margin: 20px 0px 40px 90px;
+}
+
+.imgm8 {
+    margin: 20px 0px 40px 40px;
+}
+
+.imgm9 {
+    margin: -670px 0px 0px -275px;
+}
+
+.imgm10 {
+    margin: -1230px 0px 40px 10px;
+}
+
+.res,
+.testedpart,
+.expandedpart {
+    display: flex;
+    justify-content: center;
+}
+
+.results {
+    background-color: rgb(236, 236, 236);
+    width: 680px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.results ul {
+    list-style: none;
+}
+
+.info1,
+.info2 {
+    margin-left: 80px;
+    margin-bottom: 10px;
+}
+
+.d-none {
+    display: none;
+}
+
+.containeryour li,
+.yourscore li {
+    width: 100px;
+    height: 24.8px;
+}
+
+.true {
+    background-color: rgb(78, 210, 78);
+}
+
+.false {
+    background-color: rgb(228, 77, 77);
+}
+.fiftyfifty {
+    background-color: rgb(247, 247, 74);
+}
+.pass-p {
+    padding-left: 20px;
+}
+
+.num0 {
+    margin-bottom: 35px;
+}
+
+.youranswer {
+    margin-left: 20px;
+}
+
+.ans0 {
+    margin-bottom: 36px;
+}
+
+.rans0 {
+    margin-bottom: 10px;
+}
+
+.expandedpart {
+    margin-left: 20px;
+}
+
+.expandedpartinfo {
+    margin-left: 15px;
+}
+
+.numex0 {
+    margin-bottom: 35px;
+}
+
+.yourscore {
+    margin-left: 20px;
+}
+
+.ansex0 {
+    margin-bottom: 36px;
+}
+
+.ransex0 {
+    margin-bottom: 10px;
+}
+
+.no-scroll {
+    overflow-y: hidden;
+}
+
+.cross {
+    text-decoration: none;
+}
+
+.fa-times {
+    display: flex;
+    justify-content: right;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    margin-right: 5px;
+    margin-top: -40px;
+}
+
+.time {
+    display: grid;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 20px 20px 0px 0px;
+}
+
+#pauseButton {
+    transition: 0.5s;
+}
+
+#pauseButton:hover {
+    opacity: 0.8;
+}
+
+.rans1,
+.rans2,
+.rans3,
+.rans4,
+.rans5,
+.rans6,
+.rans7,
+.rans8,
+.rans9,
+.rans10,
+.rans11,
+.rans12,
+.num1,
+.num2,
+.num3,
+.num4,
+.num5,
+.num6,
+.num7,
+.num8,
+.num9,
+.num10,
+.num11,
+.num12 {
+    margin-bottom: 1px;
+}
+
+#yourmark,
+#score {
+    margin: 20px 0px 20px 0px;
+    text-align: center;
+}
+.span {
+    background: linear-gradient(to right, rgb(239, 72, 72), coral, darkorange, orange,#ef79bc, #FF00FF);
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+}
+.calculator {
+    transform: scale(0.45);
+    margin-top: -30px;
+    margin-left: -350px;
+
+}
+.h6c {
+    text-align: left;
+     padding: 50px 0px 0px 100px;
+}
+.calculator button:hover {
+    background-color: #64a2ff;
+}
+.exercise1 {
+    border-top: 1px solid lightgrey;
+}
+/* медиа запросы */
+
+@media screen and (max-width: 576px) {
+    .container1 {
+        margin: 10px;
+        padding: 10px;
+        margin-left: 10px;
+        padding-left: 0px;
+    }
+    .calculator {
+        margin: -50px 0px 0px 0px;
+        transform: scale(0.55);
+    }
+    .h6c {
+        text-align: left;
+        padding: 40px 0px 0px 20px;
+    }
+    .textvar1 {
+        padding-left: 20px;
+        margin-top: 30px;
+    }
+    .kt1 {
+        text-align: left;
+        margin: 30px 0px 30px -100px;
+    }
+    .kt2,
+    .kt3,
+    .kt4,
+    .kt5,
+    .kt6,
+    .kt7,
+    .kt8 {
+        padding: 0px 20px 0px 0px;
+    }
+    .imgm1 {
+        width: 120px;
+        margin: 0px 0px 20px 30px;
+    }
+    .imgm2 {
+        width: 240px;
+        margin: 0px 0px 20px 30px;
+    }
+    .imgm3 {
+        width: 270px;
+        margin: 0px 0px 20px 0px;
+    }
+    .imgm4 {
+        width: 270px;
+        margin: 0px 0px 20px 0px;
+    }
+    .imgm5 {
+        width: 280px;
+        margin: 0px 0px 20px 0px;
+    }
+    .imgm6 {
+        width: 280px;
+        margin: 0px 0px 20px 0px;
+    }
+    .imgm7,
+    .imgm8 {
+        width: 280px;
+        margin: 0px 0px 20px 0px;
+    }
+    .imgm9 {
+        width: 120px;
+        margin: 0px 0px 0px 0px;
+    }
+    .imgm10 {
+        width: 120px;
+        margin: -145px 0px 0px 160px;
+    }
+    .text-muted {
+        margin-left: 0px;
+    }
+    .topic {
+        margin-left: 10px;
+    }
+    .text {
+        margin-left: 13px;
+    }
+    .inp {
+        margin-left: 20px;
+    }
+    .ex {
+        padding-left: 13px;
+    }
+    .inp input {
+        width: 100%;
+    }
+    .results {
+        width: 100vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-size: 11px;
+    }
+    .res {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 0px;
+    }
+    .pass-p {
+        padding-top: -40px;
+        padding-left: 280px;
+        padding-right: 280px;
+        text-align: center;
+    }
+    .youranswer {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .rans0 {
+        margin-bottom: 35px;
+        margin-top: 1px;
+    }
+    .testpartinfo,
+    .expandedpartinfo {
+        margin-left: 280px;
+        font-weight: bold;
+    }
+    .expandedpartinfo {
+        margin-left: 270px;
+    }
+    .yourscore {
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    .ansex0,
+    .ransex0 {
+        margin-bottom: 2px;
+        margin-bottom: 32px;
+    }
+    .maxscore {
+        margin-left: -15px;
+    }
+    .numex2 {
+        margin-left: -10px;
+        margin-right: -20px;
+    }
+    .time {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 0px 0px 0px;
+    }
+    .vartext {
+        margin-top: 20px;
+    }
+    #score {
+        margin-top: -40px;
+    }
+    #yourmark {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+    .flex {
+        margin-top: 70px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .flex2 {
+        display: flex;
+        margin-left: 100px;
+    }
+    .fa-times {
+        margin: 0px 0px 0px 80px;
+    }
+    .yourscore .ans1 {
+        margin-top: 33px;
+    }
+    .containeryour li,
+    .yourscore li {
+        height: fit-content;
+    }
+    .rans1,
+    .rans2,
+    .rans3,
+    .rans4,
+    .rans5,
+    .rans6,
+    .rans7,
+    .rans8,
+    .rans9,
+    .rans10,
+    .rans11,
+    .rans12,
+    .num1,
+    .num2,
+    .num3,
+    .num4,
+    .num5,
+    .num6,
+    .num7,
+    .num8,
+    .num9,
+    .num10,
+    .num11,
+    .num12 {
+        margin-bottom: 0px;
+    }
+    .num {
+        margin-left: 5px;
+        margin-right: -25px;
+    }
+    .youranswer {
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    .rightans {
+        margin-left: -15px;
+    }
+    .results {
+        background-color: white;
+    }
+    .expandedpart {
+        margin-left: -30px;
+    }
+}
