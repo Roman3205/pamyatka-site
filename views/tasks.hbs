@@ -61,39 +61,11 @@
                             </form>
                         </div>
                     </div>
-                    <h6 class="mt-5 calculator__h6">Для упрощения вычислений используйте встроенный калькулятор</h6>
-                    <div class="calculator my-4">
-                        <div class="output" style="border: 5px solid black; width: 180px; height: 40px; box-sizing: border-box; font-size: 22px; text-align: right; font-family: Arial;"></div>
-                        <div class="string1" style="border: 2px solid black; width: 180px; height: 40px; display: flex;">
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">7</button>
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">8</button>
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">9</button>
-                            <button class="reset" style="width: 25%; height: 100%; font-size: 20px;">C</button>
-                        </div>
-                        <div class="string2" style="border: 2px solid black; width: 180px; height: 40px; display: flex;">
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">4</button>
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">5</button>
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">6</button>
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">/</button>
-                        </div>
-                        <div class="string3" style="border: 2px solid black; width: 180px; height: 40px; display: flex;">
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">1</button>
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">2</button>
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">3</button>
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">*</button>
-                        </div>
-                        <div class="string4" style="border: 2px solid black; width: 180px; height: 40px; display: flex;">
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">0</button>
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">+</button>
-                            <button class="button" style="width: 25%; height: 100%; font-size: 20px;">-</button>
-                            <button class="result" style="width: 25%; height: 100%; font-size: 20px;"><b>=</b></button>
-                        </div>
-                    </div>
                 </div>
                 <!-- Вывод задач -->
                 <div class="col-sm-12 col-md-8 ms-2 ms-lg-0 products-list">
                     {{#if error}}
-                            <div class="alert alert-danger">Ответ на задание {{answer.title}} от автора {{answer.author_name}} неверный, попробуйте ещё раз (id:{{answer._id}})</div>
+                            <div class="alert alert-danger">Ответ на задание "{{answer.title}}" от автора {{answer.author_name}} неверный, попробуйте ещё раз (id:{{answer._id}})</div>
                             {{/if}}
                             {{#if success}}
                             <div class="alert alert-success">Задание {{answer.title}} от автора {{answer.author_name}} решено верно! (id:{{answer._id}})</div>
