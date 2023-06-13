@@ -21,7 +21,8 @@ mongoose.connect('mongodb://127.0.0.1:27017/Pamyatkaplus')
 let taskSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     description: {
         type: String,
@@ -420,7 +421,7 @@ app.post(`/pamyatkaplus/tasks/search`, async function(req,res) {
     let search = {isChecked: true}
 
     if(title) {
-        search.title = title
+        search.title = {$regex: title, $options: 'i'}
     }
 
     if(category) {
