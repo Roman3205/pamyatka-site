@@ -289,6 +289,10 @@ pauseButton.addEventListener('click', function() {
 startTimer();
 
 // калькулятор
+let output = document.querySelector(`.output`)
+let reset = document.querySelector(`.reset`)
+let buttons = document.querySelectorAll(`.button`)
+
 buttons.forEach(function(button) {
     button.addEventListener('click', function() {
         if (output.textContent.length < 12) {
@@ -297,7 +301,6 @@ buttons.forEach(function(button) {
     });
 });
 
-  
 let result = document.querySelector('.result');
 
 result.addEventListener('click', function() {
@@ -306,10 +309,10 @@ result.addEventListener('click', function() {
     if (input.length>11 || input.includes('//') || input.includes('**') || input.includes('++') || input.includes('--') || input.includes('==')) {
         output.textContent = ``;
     } else {
-        output.textContent = eval(input);
+        output.textContent = input;
     }
 });
-  
+
 reset.addEventListener(`click`, function() {
     output.style.color = `black`
     output.textContent = ``
