@@ -309,7 +309,7 @@ result.addEventListener('click', function() {
     if (input.length>11 || input.includes('//') || input.includes('**') || input.includes('++') || input.includes('--') || input.includes('==')) {
         output.textContent = ``;
     } else {
-        output.textContent = input;
+        output.textContent = eval(input);
     }
 });
 
