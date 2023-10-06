@@ -21,13 +21,10 @@ body a {
     font-size: 17px;
 }
 
-.header a {
+body a:hover {
+    opacity: 0.7!important;
+    color: whitesmoke!important;
     transition: 0.6s;
-}
-
-.header a:hover {
-    color: whitesmoke;
-    opacity: 0.7;
 }
 
 .header, .footer {
