@@ -1,6 +1,9 @@
 let express = require(`express`);
 let app = express();
 let PORT = process.env.PORT || 3003;
+let dotenv = require('dotenv')
+
+dotenv.config()
 
 app.listen(PORT, function() {
     console.log(`http://localhost:` + PORT);
@@ -16,7 +19,9 @@ app.set('view engine', 'hbs');
 
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://127.0.0.1:27017/Pamyatkaplus')
+mongoose.set('strictQuery', false)
+let uri = process.env.MONGODB_HOST
+mongoose.connect(uri)
 
 let taskSchema = new mongoose.Schema({
     title: {

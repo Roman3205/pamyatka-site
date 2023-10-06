@@ -90,23 +90,7 @@ main {
     -webkit-text-fill-color: transparent;
     color: #0B2349;
 }
-.carousel-inner img {
-    width: 100%;
-    filter: brightness(70%);
-}
 
-@media screen and (max-width: 576px) {
-    .carousel-caption p,
-    .carousel-caption h5 {
-        font-size: 18px;
-        font-weight: bold;
-        padding-bottom: 30px;
-    }
-    .carousel-inner img {
-        height: 320px;
-        filter: brightness(65%);
-    }
-}
 
 @media screen and (min-height: 1700px) {
     .footer {
