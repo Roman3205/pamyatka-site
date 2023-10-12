@@ -161,4 +161,8 @@ body {
 	* {
 		overflow: hidden;
 	}
+
+	.nav-link {
+        font-size: 22.5px!important;
+    }
 }

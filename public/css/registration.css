@@ -179,3 +179,9 @@ body {
 		overflow: hidden;
 	}
 }
+
+@media screen and (max-width: 992px) {
+    .nav-link {
+        font-size: 22.5px!important;
+    }
+}

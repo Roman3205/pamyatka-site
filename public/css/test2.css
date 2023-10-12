@@ -546,3 +546,9 @@ input[type="button"]:hover {
         margin-left: -30px;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .nav-link {
+        font-size: 22.5px!important;
+    }
+}

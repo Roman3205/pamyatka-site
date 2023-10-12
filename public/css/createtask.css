@@ -192,4 +192,8 @@ main {
     .products-list {
         height: auto;
     }
+
+    .nav-link {
+        font-size: 22.5px!important;
+    }
 }

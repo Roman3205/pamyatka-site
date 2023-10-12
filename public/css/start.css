@@ -234,6 +234,10 @@ body a {
         padding-right: 0px;
         padding-left: 0px;
     }
+
+    .nav-link {
+        font-size: 22.5px!important;
+    }
     
     .header,
     .footer {

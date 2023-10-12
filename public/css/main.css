@@ -99,3 +99,9 @@ main {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 992px) {
+    .nav-link {
+        font-size: 22.5px!important;
+    }
+}

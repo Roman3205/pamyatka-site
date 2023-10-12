@@ -73,4 +73,8 @@ body a {
         flex-direction: column-reverse;
         gap: 80px;
     }
+
+    .nav-link {
+        font-size: 22.5px!important;
+    }
 }

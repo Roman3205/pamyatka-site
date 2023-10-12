@@ -120,4 +120,8 @@ main {
     .image {
         width: 260px!important;
     }
+
+    .nav-link {
+        font-size: 22.5px!important;
+    }
 }

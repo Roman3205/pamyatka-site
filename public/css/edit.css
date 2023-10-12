@@ -64,3 +64,9 @@ body a {
 .out__link {
     transition: 0.6s;
 }
+
+@media screen and (max-width: 992px) {
+    .nav-link {
+        font-size: 22.5px!important;
+    }
+}
